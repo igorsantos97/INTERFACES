@@ -14,9 +14,147 @@
     @include tipo-1(18);
 }
 
+body {
+    padding: 0 100px;
+}
 
+p {
+    font-family: $fonte-1;
+    margin: 0;
+}
 
+header {
+    left: 0;
+    padding: 0 100px;
+    padding-top: 30px;
+    position: absolute;
+    width: 100%;
+    .grid-12 {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        display: flex;
+        & li + li {
+            margin-left: 40px;
+        }
+    }
+    a {
+        color: $preto;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include tipo-1(14);
+    }
+}
 
+.banner {
+    border-bottom: 15px $cor-primaria solid; 
+    height: calc(100vh);
+    min-height: 765px !important;
+    padding-top: calc(100px + 5%);
+    &::before, &::after {
+        content: '';
+        background: $cor-primaria;
+        bottom: 0;
+        display: inline-block;
+        height: calc(100vh);
+        min-height: 765px !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        z-index: -1;
+    }
+
+    .banner-img img {
+        margin-left: -65px;
+    }
+
+    .banner-info {
+        text-align: center;
+        padding-right: 50px;
+        position: relative;
+        h1 {
+            font-size: 100px;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 80px;
+            margin-bottom: 15px;
+            span {
+                color: $cor-primaria;
+            }
+        }
+        p {
+            @include tipo-1(26);
+        }
+        & > div {
+            align-items: center;
+            display: flex;
+            font-weight: 600;
+            margin-top: 40px;
+            position: absolute;
+            right: 30px;
+            text-transform: uppercase;            
+            @include tipo-1(16);
+            button {
+                background: $cor-secundaria;
+                border: solid 1px $cinza-claro;
+                border-radius: 50%;
+                height: 70px;
+                margin-right: 20px;
+                width: 70px;
+                &::after {
+                    content: '';
+                    background: url(../img/icon/play-button.jpg) no-repeat;
+                    display: inline-block;
+                    height: 60px;
+                    left: 30px;
+                    position: absolute;
+                    top: 23px;
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    .banner-phrase {
+        bottom: -45px;
+        color: #FFF;
+        left: 0;
+        position: absolute;
+        text-transform: uppercase;
+    }
+
+    .banner-networks {
+        position: absolute;
+        right: -60px;
+        top: 20%;
+        li:first-child {
+            color: $cor-primaria;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 140px;
+            margin-right: -40px;
+            transform: rotate(90deg);
+            text-transform: uppercase;
+        }
+        li:nth-child(2)::after {
+            content: '';
+            background: $cor-primaria;
+            display: inline-block;
+            left: 63px;
+            position: absolute;
+            top: 100px;
+            height: 55px;
+            width: 1px;
+        }
+        li:not(:first-child) {
+            margin-bottom: 15px;
+            padding-left: 58px;
+        }
+    }
+}
 
 
 

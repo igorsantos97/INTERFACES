@@ -180,3 +180,184 @@ button {
     margin-right: 0;
   }
 }
+
+.title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.25em;
+  line-height: 0.94444em;
+}
+
+.sub-title {
+  color: #999;
+  font-weight: 100;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.11111em;
+}
+
+body {
+  padding: 0 100px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+header {
+  left: 0;
+  padding: 0 100px;
+  padding-top: 30px;
+  position: absolute;
+  width: 100%;
+}
+
+header .grid-12 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li + li {
+  margin-left: 40px;
+}
+
+header a {
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.banner {
+  border-bottom: 15px #754EF9 solid;
+  height: calc(100vh);
+  min-height: 765px !important;
+  padding-top: calc(100px + 5%);
+}
+
+.banner::before, .banner::after {
+  content: '';
+  background: #754EF9;
+  bottom: 0;
+  display: inline-block;
+  height: calc(100vh);
+  min-height: 765px !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.banner .banner-img img {
+  margin-left: -65px;
+}
+
+.banner .banner-info {
+  text-align: center;
+  padding-right: 50px;
+  position: relative;
+}
+
+.banner .banner-info h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+
+.banner .banner-info h1 span {
+  color: #754EF9;
+}
+
+.banner .banner-info p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.625em;
+  line-height: 1.30769em;
+}
+
+.banner .banner-info > div {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  margin-top: 40px;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
+.banner .banner-info > div button {
+  background: #FFF;
+  border: solid 1px #999;
+  border-radius: 50%;
+  height: 70px;
+  margin-right: 20px;
+  width: 70px;
+}
+
+.banner .banner-info > div button::after {
+  content: '';
+  background: url(../img/icon/play-button.jpg) no-repeat;
+  display: inline-block;
+  height: 60px;
+  left: 30px;
+  position: absolute;
+  top: 23px;
+  width: 60px;
+}
+
+.banner .banner-phrase {
+  bottom: -45px;
+  color: #FFF;
+  left: 0;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.banner .banner-networks {
+  position: absolute;
+  right: -60px;
+  top: 20%;
+}
+
+.banner .banner-networks li:first-child {
+  color: #754EF9;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 140px;
+  margin-right: -40px;
+  transform: rotate(90deg);
+  text-transform: uppercase;
+}
+
+.banner .banner-networks li:nth-child(2)::after {
+  content: '';
+  background: #754EF9;
+  display: inline-block;
+  left: 63px;
+  position: absolute;
+  top: 100px;
+  height: 55px;
+  width: 1px;
+}
+
+.banner .banner-networks li:not(:first-child) {
+  margin-bottom: 15px;
+  padding-left: 58px;
+}
