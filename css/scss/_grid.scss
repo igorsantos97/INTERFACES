@@ -1,0 +1,123 @@
+// Var(s)  do GRID
+$cols: 12;
+$gutter: 15px;
+$l-device: 1080px;
+$m-device: 760px;
+$s-device: 480px;
+
+%flex {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+// Minix de MEDIA QUERY
+@mixin device($size) {
+    @if($size == l) {
+        // min 1080
+        @media screen and (min-width: $l-device) {
+            @content;
+        }
+    }
+    @else if($size == m) {
+        // min 760 até 1079
+        @media screen and (min-width: $m-device) and (max-width: $l-device - 1) {
+            @content;
+        }
+    }
+    @else if($size == s) {
+        // max 759
+        @media screen and (max-width: $m-device - 1) {
+            @content;
+        }
+    }
+}
+
+
+// Função do GRID - FUNC. LARGURA DAS COLUNAS em %
+@function grid($col, $offset: false) {
+    $width: $col / $cols * 100 + "%";
+    $result: calc(#{$width} - #{$gutter});
+    @if($offset == offset) {
+        $gutter: $gutter / 2;
+        $result: calc(#{$width} + #{$gutter});
+    }
+    @return $result;
+}
+
+// Gerar as classes de grid - GERANDO AS COLUNAS
+@for $i from 1 through $cols {
+    .grid-#{$i} {
+        width: grid($i);
+    }
+}
+
+// Mixin da estutura do GRID
+@mixin grid-structure {
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+    min-height: 1px;
+    @include device(s) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+[class^="grid-"] {
+    @include grid-structure;
+    background: rgba(0,0,0,.5);
+    margin-bottom: 5px;
+    min-height: 50px !important;
+}
+
+// Classes do OFFSET
+@for $i from 1 through $cols {
+    .offset-#{$i} {
+        margin-left: grid($i, offset);
+        @extend %offset;
+    }
+}
+
+@include device(s) {
+    %offset {
+        margin-left: 0;
+    }
+}
+
+// Mixin para CONTAINER
+@mixin container {
+    margin: 0 auto;
+    max-width: $l-device;
+    position: relative;
+    @extend %flex;
+    @include device(m) {
+        max-width: $m-device;
+    }
+    @include device(s) {
+        max-width: $s-device;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.container {
+    @include container;
+}
+
+// Mixin para ROW
+@mixin row {
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+    position: relative;
+    @extend %flex;
+    @include device(s) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.row {
+    @include row;
+}
+
