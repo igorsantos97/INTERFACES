@@ -66,9 +66,6 @@ $s-device: 480px;
 
 [class^="grid-"] {
     @include grid-structure;
-    background: rgba(0,0,0,.5);
-    margin-bottom: 5px;
-    min-height: 50px !important;
 }
 
 // Classes do OFFSET
