@@ -49,22 +49,29 @@ header {
 }
 
 .banner {
-    border-bottom: 15px $cor-primaria solid; 
-    height: calc(100vh);
-    min-height: 765px !important;
+    height: 100vh;
     padding-top: calc(100px + 5%);
+    .container {
+        min-height: 535px;
+    }
     &::before, &::after {
         content: '';
         background: $cor-primaria;
-        bottom: 0;
         display: inline-block;
-        height: calc(100vh);
-        min-height: 765px !important;
         position: absolute;
         left: 0;
-        top: 0;
-        width: 30%;
         z-index: -1;
+    }
+    &::before {
+        top: 0;
+        height: 100vh;
+        width: 30%;
+    }
+    &::after {
+        bottom: 0;
+        height: 15px;
+        margin-top: 70px;
+        width: 100%;
     }
 
     .banner-img img {

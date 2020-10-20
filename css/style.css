@@ -242,24 +242,34 @@ header a {
 }
 
 .banner {
-  border-bottom: 15px #754EF9 solid;
-  height: calc(100vh);
-  min-height: 765px !important;
+  height: 100vh;
   padding-top: calc(100px + 5%);
+}
+
+.banner .container {
+  min-height: 535px;
 }
 
 .banner::before, .banner::after {
   content: '';
   background: #754EF9;
-  bottom: 0;
   display: inline-block;
-  height: calc(100vh);
-  min-height: 765px !important;
   position: absolute;
   left: 0;
-  top: 0;
-  width: 30%;
   z-index: -1;
+}
+
+.banner::before {
+  top: 0;
+  height: 100vh;
+  width: 30%;
+}
+
+.banner::after {
+  bottom: 0;
+  height: 15px;
+  margin-top: 70px;
+  width: 100%;
 }
 
 .banner .banner-img img {
