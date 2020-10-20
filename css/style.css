@@ -185,6 +185,7 @@ button {
   color: #333;
   font-weight: 600;
   margin-bottom: 15px;
+  margin-top: 25px;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-size: 2.25em;
@@ -429,4 +430,69 @@ header a.btn {
   font-family: "Roboto", sans-serif;
   font-size: 0.75em;
   line-height: 2em;
+}
+
+.portfolio .row > * {
+  margin-bottom: 10px;
+}
+
+.portfolio .portfolio-item {
+  position: relative;
+}
+
+.portfolio .portfolio-item:hover .portfolio-details {
+  display: flex !important;
+}
+
+.portfolio .portfolio-details {
+  display: none;
+  align-items: center;
+  background: #754EF9;
+  color: #FFF;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.portfolio .portfolio-details h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.25em;
+  line-height: 0.94444em;
+}
+
+.portfolio .portfolio-details p {
+  font-weight: 100;
+  width: 80%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.portfolio .portfolio-details a {
+  color: #FFF;
+  bottom: 15px;
+  font-weight: 100;
+  position: absolute;
+  right: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.portfolio .portfolio-details a::after {
+  content: '';
+  background: url(../img/icon/expand.png) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 24px;
+  margin-left: 10px;
+  width: 24px;
 }

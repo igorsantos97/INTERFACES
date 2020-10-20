@@ -2,6 +2,7 @@
     color: $cinza-escuro;
     font-weight: 600;
     margin-bottom: 15px;
+    margin-top: 25px;
     text-align: center;
     @include tipo-1(36);
 }
@@ -212,6 +213,59 @@ header {
     }
 }
 
+.portfolio {
+    .row > * {
+        margin-bottom: 10px;
+    }
+    .portfolio-item {
+        position: relative;
+        &:hover .portfolio-details {
+            display: flex !important;
+        }
+    }
 
+    .portfolio-details {
+        display: none;
+        align-items: center;
+        background: $cor-primaria;
+        color: $cor-secundaria;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        h4 {
+            font-weight: 500;
+            margin-bottom: 15px;
+            margin-top: 0;
+            @include tipo-1(36);
+        }
+        p {
+            font-weight: 100;
+            width: 80%;
+            @include tipo-1(14);
+        }
+        a {
+            color: $cor-secundaria;
+            bottom: 15px;
+            font-weight: 100;
+            position: absolute;
+            right: 15px;
+            @include tipo-1(14);
+            &::after {
+                content: '';
+                background: url(../img/icon/expand.png) no-repeat;
+                background-size: contain;
+                display: inline-block;
+                height: 24px;
+                margin-left: 10px;
+                width: 24px;
+            }
+        }
+    }
+}
 
 

@@ -20,7 +20,6 @@ $fonte-2: 'Roboto', sans-serif;
     @return $pixel / $contexto + em;
 }
 
-
 @mixin tipo-1($size) {
     // Open Sans
     font-family: $fonte-1;
