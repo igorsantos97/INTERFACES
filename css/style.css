@@ -201,6 +201,15 @@ button {
   line-height: 1.11111em;
 }
 
+.btn {
+  background: #754EF9;
+  color: #FFF;
+  display: inline-block;
+  min-width: 130px;
+  padding: 5px 15px;
+  text-align: center;
+}
+
 body {
   padding: 0 100px;
 }
@@ -228,6 +237,11 @@ header ul {
   display: flex;
 }
 
+header ul li {
+  align-items: center;
+  display: flex;
+}
+
 header ul li + li {
   margin-left: 40px;
 }
@@ -239,6 +253,12 @@ header a {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875em;
   line-height: 1.71429em;
+}
+
+header a.btn {
+  border-radius: 40px;
+  padding: 10px 15px;
+  width: 190px;
 }
 
 .banner {
@@ -314,8 +334,9 @@ header a {
 
 .banner .banner-info > div button {
   background: #FFF;
-  border: solid 1px #999;
+  border: none;
   border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   height: 70px;
   margin-right: 20px;
   width: 70px;
@@ -370,4 +391,42 @@ header a {
 .banner .banner-networks li:not(:first-child) {
   margin-bottom: 15px;
   padding-left: 58px;
+}
+
+.info {
+  margin-bottom: 85px;
+  margin-top: 85px;
+}
+
+.info .info-item {
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px;
+  text-align: center;
+}
+
+.info .info-item strong {
+  color: #000;
+  font-style: italic;
+  margin: 45px 0 25px;
+}
+
+.info .info-item p {
+  color: #999;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.info .info-item a.btn {
+  display: inline-block;
+  font-style: italic;
+  margin-top: 75px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  line-height: 2em;
 }

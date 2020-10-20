@@ -6,6 +6,7 @@ $cinza-claro: #999;
 $cinza-escuro: #333;
 $roxo-claro: #754EF9;
 $preto:#000;
+$shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
 
 // Fontes 
@@ -46,7 +47,11 @@ $fonte-2: 'Roboto', sans-serif;
 
 @mixin tipo-2($size) {
     // Roboto
-    font-family: $fonte-1;
+    font-family: $fonte-2;
+    @if $size == 12 {
+        font-size: em(12);
+        line-height: em(24, 12);
+    }
     @if $size == 14 {
         font-size: em(14);
         line-height: em(24, 14);
