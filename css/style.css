@@ -559,12 +559,16 @@ header a.btn {
   display: flex;
 }
 
-.testimonial-slider-control li + li {
-  margin-left: 15px;
+.testimonial-slider-control li button {
+  background: #E9E4FE;
 }
 
 .testimonial-slider-control li.active button {
   background: #754EF9;
+}
+
+.testimonial-slider-control li + li {
+  margin-left: 15px;
 }
 
 .testimonial-slider-control button {
@@ -572,4 +576,77 @@ header a.btn {
   border-radius: 50%;
   height: 13px;
   width: 13px;
+}
+
+.contact {
+  margin-bottom: 100px;
+}
+
+.contact form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact form > * {
+  height: 50px;
+}
+
+.contact form input {
+  border: solid 1px #754EF9;
+  border-right: none;
+  padding: 10px 12px;
+  width: 320px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.contact form button {
+  background: #754EF9;
+  border: solid 1px #754EF9;
+  border-left: none;
+  color: #FFF;
+  font-style: italic;
+  width: 160px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+footer {
+  background: #754EF9;
+  box-shadow: -100px 0 0 #754EF9, 100px 0 0 #754EF9;
+  padding: 55px 0;
+}
+
+footer .grid-12 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+footer ul:nth-child(2) li + li {
+  margin-left: 55px;
+}
+
+footer ul:nth-child(3) li + li {
+  margin-left: 30px;
+}
+
+footer a {
+  color: #FFF;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
 }

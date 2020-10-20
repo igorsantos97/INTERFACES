@@ -323,13 +323,15 @@ header {
         justify-content: center;
         display: flex;
     }
-    li + li {
-        margin-left: 15px;
+    li button {
+        background: #E9E4FE;
     }
     li.active button {
         background: $cor-primaria;
     }
-
+    li + li {
+        margin-left: 15px;
+    }
     button {
         border: none;
         border-radius: 50%;
@@ -339,3 +341,60 @@ header {
 }
 
 
+.contact {
+    margin-bottom: 100px;
+    form {
+        display: flex;
+        justify-content: center;
+        > * {
+            height: 50px;
+        }
+        input {
+            border: solid 1px $cor-primaria;
+            border-right: none;
+            padding: 10px 12px;
+            width: 320px;
+            @include tipo-1(14);
+        }
+        button {
+            background: $cor-primaria;
+            border: solid 1px $cor-primaria;
+            border-left: none;
+            color: $cor-secundaria;
+            font-style: italic;
+            width: 160px;
+            @include tipo-2(14);
+        }
+    }
+}
+
+footer {
+    background: $cor-primaria;
+    box-shadow: -100px 0 0 $cor-primaria, 
+                100px 0 0 $cor-primaria;
+    padding: 55px 0;
+    .grid-12 {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        align-items: center;
+        display: flex;
+        text-align: center;
+    }
+    ul:nth-child(2) li + li {
+        margin-left: 55px;
+    }
+    ul:nth-child(3) li + li {
+        margin-left: 30px;
+    }
+    a {
+        color: $cor-secundaria;
+        font-weight: 100;
+        @include tipo-1(14);
+    }
+}
