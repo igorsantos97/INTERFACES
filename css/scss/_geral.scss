@@ -25,12 +25,15 @@
 }
 
 .btn-mobile {
-    // display: none;
+    display: none;
     background: transparent;
     border: none;
     height: 50px;
     width: 50px;
     z-index: 9;
+    @include device(s) {
+        display: block;
+    }
     & span {
         background: $cor-secundaria;
         border-radius: 200px;
@@ -100,7 +103,7 @@ header {
         justify-content: space-between;
     }
     ul {
-        display: flex;
+        display: none;
         @include device(s) {
             background: $cor-primaria;
             box-shadow: $shadow;
@@ -124,7 +127,7 @@ header {
                     position: absolute;
                     right: -280px;
                     top: 0;
-                    width: 150%;
+                    width: 170%;
                 }
             }
         }
@@ -187,6 +190,7 @@ header {
     &::before {
         top: 0;
         height: 100vh;
+        min-height: 230px;
         width: 30%;
         @include device(m) {
             width: 31%;
@@ -394,6 +398,11 @@ header {
     flex-direction: column;
     text-align: center;
     padding: 70px 15px;
+    & + .info-item {
+        @include device(s) {
+            margin-top: 15px;
+        }
+    }
     @include device(l) {
         padding: 70px;
     }
@@ -425,6 +434,9 @@ header {
     position: relative;
     &:hover .portfolio-details {
         display: flex !important;
+    }
+    img {
+        width: 100%;
     }
 }
 
@@ -479,6 +491,12 @@ header {
 .testimonial-slider {
     padding-right: 65px;
     padding-left: 65px;
+    @include device(s) {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: 14px;
+        margin-left: 14px;
+    }
 }
 
 .testimonial-slider-item {
@@ -577,6 +595,9 @@ footer {
         align-items: center;
         display: flex;
         justify-content: space-between;
+        @include device(s) {
+            flex-direction: column;
+        }
     }
     ul {
         display: flex;
@@ -588,6 +609,12 @@ footer {
     }
     ul:nth-child(2) li + li {
         margin-left: 55px;
+        @include device(m) {
+            margin-left: 35px;
+        }
+        @include device(s) {
+            margin-left: 50px;
+        }
     }
     ul:nth-child(3) li + li {
         margin-left: 30px;
