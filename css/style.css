@@ -211,8 +211,25 @@ button {
   text-align: center;
 }
 
-body {
-  padding: 0 100px;
+@media screen and (min-width: 1080px) {
+  body, header {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  body, header {
+    padding-left: 65px !important;
+    padding-right: 65px !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  body, header {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }
 
 p {
@@ -238,6 +255,21 @@ header ul {
   display: flex;
 }
 
+@media screen and (max-width: 759px) {
+  header ul {
+    display: none;
+    background: #212121;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 120px;
+    position: fixed;
+    left: 0;
+    top: -16px;
+    width: 300px;
+    z-index: 1;
+  }
+}
+
 header ul li {
   align-items: center;
   display: flex;
@@ -245,6 +277,13 @@ header ul li {
 
 header ul li + li {
   margin-left: 40px;
+}
+
+@media screen and (max-width: 759px) {
+  header ul li + li {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }
 
 header a {
@@ -262,9 +301,31 @@ header a.btn {
   width: 190px;
 }
 
+@media screen and (max-width: 759px) {
+  header a:not(.logo) {
+    border-radius: 0;
+    color: #FFF;
+    padding: 16px 30px;
+    text-align: center;
+    width: 100%;
+    z-index: 9;
+  }
+}
+
+header a.logo {
+  margin-left: -2px;
+}
+
 .banner {
   height: 100vh;
-  padding-top: calc(100px + 5%);
+  padding-top: calc(100px + 3%);
+}
+
+@media screen and (max-width: 759px) {
+  .banner {
+    height: auto;
+    padding-top: calc(80px + 3%);
+  }
 }
 
 .banner .container {
@@ -286,6 +347,19 @@ header a.btn {
   width: 30%;
 }
 
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  .banner::before {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .banner::before {
+    height: 35vh;
+    width: 100%;
+  }
+}
+
 .banner::after {
   bottom: 0;
   height: 15px;
@@ -293,14 +367,52 @@ header a.btn {
   width: 100%;
 }
 
+@media screen and (max-width: 759px) {
+  .banner::after {
+    content: none;
+  }
+}
+
+.banner-img {
+  align-items: center;
+  display: flex;
+}
+
 .banner-img img {
   margin-left: -65px;
 }
 
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  .banner-img img {
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .banner-img img {
+    margin: 0 auto;
+    width: 250px;
+  }
+}
+
 .banner-info {
   text-align: center;
-  padding-right: 50px;
+  padding-right: 0;
   position: relative;
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-info {
+    padding-right: 50px !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .banner-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .banner-info h1 {
@@ -309,6 +421,20 @@ header a.btn {
   letter-spacing: -2px;
   line-height: 80px;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  .banner-info h1 {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .banner-info h1 {
+    font-size: 60px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
 }
 
 .banner-info h1 span {
@@ -321,6 +447,14 @@ header a.btn {
   line-height: 1.30769em;
 }
 
+@media screen and (max-width: 759px) {
+  .banner-info p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125em;
+    line-height: 1.11111em;
+  }
+}
+
 .banner-info > div {
   align-items: center;
   display: flex;
@@ -331,6 +465,12 @@ header a.btn {
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+}
+
+@media screen and (max-width: 759px) {
+  .banner-info > div {
+    position: relative;
+  }
 }
 
 .banner-info > div button {
@@ -362,10 +502,90 @@ header a.btn {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 759px) {
+  .banner-phrase {
+    position: relative;
+  }
+}
+
 .banner-networks {
   position: absolute;
-  right: -60px;
-  top: 20%;
+  bottom: -37%;
+  right: -20px;
+  top: auto;
+}
+
+@media screen and (max-width: 759px) {
+  .banner-networks {
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-networks {
+    right: -60px;
+    top: 20%;
+  }
+}
+
+.banner-networks ul {
+  display: flex;
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-networks ul {
+    display: inherit;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .banner-networks ul {
+    justify-content: center;
+  }
+  .banner-networks ul li {
+    height: fit-content;
+    position: relative;
+  }
+}
+
+.banner-networks ul li:first-child {
+  margin-right: 65px;
+  transform: rotate(0);
+}
+
+@media screen and (max-width: 759px) {
+  .banner-networks ul li:first-child {
+    margin-bottom: 0;
+  }
+}
+
+.banner-networks ul li:nth-child(2)::after {
+  height: 1px;
+  left: 135px;
+  position: absolute;
+  top: 27px;
+  width: 70px;
+}
+
+@media screen and (max-width: 759px) {
+  .banner-networks ul li:nth-child(2)::after {
+    left: -60px;
+    top: 10px;
+    width: 55px;
+  }
+}
+
+.banner-networks ul li:not(:first-child) {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-networks ul li:not(:first-child) {
+    padding-left: 58px !important;
+  }
 }
 
 .banner-networks li:first-child {
@@ -373,25 +593,29 @@ header a.btn {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 140px;
-  margin-right: -40px;
-  transform: rotate(90deg);
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-networks li:first-child {
+    transform: rotate(90deg) !important;
+    margin-right: -40px !important;
+  }
 }
 
 .banner-networks li:nth-child(2)::after {
   content: '';
   background: #754EF9;
   display: inline-block;
-  left: 63px;
-  position: absolute;
-  top: 100px;
-  height: 55px;
-  width: 1px;
 }
 
-.banner-networks li:not(:first-child) {
-  margin-bottom: 15px;
-  padding-left: 58px;
+@media screen and (min-width: 1080px) {
+  .banner-networks li:nth-child(2)::after {
+    height: 55px !important;
+    left: 63px !important;
+    top: 100px !important;
+    width: 1px !important;
+  }
 }
 
 .info {
@@ -405,8 +629,14 @@ header a.btn {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 70px;
   text-align: center;
+  padding: 70px 15px;
+}
+
+@media screen and (min-width: 1080px) {
+  .info-item {
+    padding: 70px;
+  }
 }
 
 .info-item strong {
