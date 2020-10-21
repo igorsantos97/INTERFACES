@@ -211,6 +211,49 @@ button {
   text-align: center;
 }
 
+.btn-mobile {
+  background: transparent;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 9;
+}
+
+.btn-mobile span {
+  background: #FFF;
+  border-radius: 200px;
+  display: block;
+  height: 3px;
+  transition: .5s;
+  width: 100%;
+}
+
+.btn-mobile span:nth-child(2) {
+  width: 80%;
+}
+
+.btn-mobile span:nth-child(2), .btn-mobile span:nth-child(3) {
+  margin-top: 10px;
+}
+
+.btn-mobile span:nth-child(3) {
+  width: 60%;
+}
+
+.btn-mobile.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.btn-mobile.active span:nth-child(2) {
+  display: none;
+}
+
+.btn-mobile.active span:nth-child(3) {
+  margin-top: -3px;
+  transform: rotate(-45deg);
+  width: 100%;
+}
+
 @media screen and (min-width: 1080px) {
   body, header {
     padding-left: 100px;
@@ -257,16 +300,31 @@ header ul {
 
 @media screen and (max-width: 759px) {
   header ul {
+    background: #754EF9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
     display: none;
-    background: #212121;
     height: 100vh;
     flex-direction: column;
     padding-top: 120px;
     position: fixed;
     left: 0;
     top: -16px;
-    width: 300px;
+    width: 280px;
     z-index: 1;
+  }
+  header ul.active {
+    display: flex !important;
+  }
+  header ul.active::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    height: 100vh;
+    left: 280px;
+    position: absolute;
+    right: -280px;
+    top: 0;
+    width: 150%;
   }
 }
 
