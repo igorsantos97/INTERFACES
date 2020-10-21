@@ -458,11 +458,19 @@ header {
         margin-bottom: 15px;
         margin-top: 0;
         @include tipo-1(36);
+        @include device(m) {
+            @include tipo-1(18);
+        }
     }
     p {
         font-weight: 100;
         width: 80%;
         @include tipo-1(14);
+        @include device(m) {
+            margin-bottom: 15px;
+            max-height: 70px;
+            overflow-y: hidden;
+        }
     }
     a {
         color: $cor-secundaria;

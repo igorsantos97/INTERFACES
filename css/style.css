@@ -774,12 +774,28 @@ header a.logo {
   line-height: 0.94444em;
 }
 
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  .portfolio-details h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125em;
+    line-height: 1.11111em;
+  }
+}
+
 .portfolio-details p {
   font-weight: 100;
   width: 80%;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875em;
   line-height: 1.71429em;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+  .portfolio-details p {
+    margin-bottom: 15px;
+    max-height: 70px;
+    overflow-y: hidden;
+  }
 }
 
 .portfolio-details a {
