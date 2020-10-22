@@ -216,6 +216,7 @@ button {
   background: transparent;
   border: none;
   height: 50px;
+  outline: none;
   width: 50px;
   z-index: 9;
 }
@@ -307,8 +308,9 @@ header ul {
 
 @media screen and (max-width: 759px) {
   header ul {
+    animation: animationMenu .5s forwards;
     background: #754EF9;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
     display: none;
     height: 100vh;
     flex-direction: column;
@@ -318,6 +320,14 @@ header ul {
     top: -16px;
     width: 280px;
     z-index: 1;
+  }
+  @keyframes animationMenu {
+    from {
+      margin-left: -280px;
+    }
+    to {
+      margin-left: 0px;
+    }
   }
   header ul.active {
     display: flex !important;
@@ -331,7 +341,7 @@ header ul {
     position: absolute;
     right: -280px;
     top: 0;
-    width: 170%;
+    width: 200%;
   }
 }
 
@@ -543,7 +553,7 @@ header a.logo {
   background: #FFF;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   height: 70px;
   margin-right: 20px;
   width: 70px;
@@ -691,7 +701,7 @@ header a.logo {
 
 .info-item {
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -840,7 +850,7 @@ header a.logo {
 
 .testimonial-slider-item {
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   display: flex;
   justify-content: center;
   flex-direction: column;

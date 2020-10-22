@@ -29,11 +29,13 @@
     background: transparent;
     border: none;
     height: 50px;
+    outline: none;
     width: 50px;
     z-index: 9;
     @include device(s) {
         display: block;
     }
+    
     & span {
         background: $cor-secundaria;
         border-radius: 200px;
@@ -105,6 +107,16 @@ header {
     ul {
         display: none;
         @include device(s) {
+            @keyframes animationMenu {
+                from {
+                    margin-left: -280px;
+                }
+                to {
+                    margin-left: 0px;
+                }
+            } 
+
+            animation: animationMenu .5s forwards;
             background: $cor-primaria;
             box-shadow: $shadow;
             display: none;
@@ -127,7 +139,7 @@ header {
                     position: absolute;
                     right: -280px;
                     top: 0;
-                    width: 170%;
+                    width: 200%;
                 }
             }
         }
@@ -149,6 +161,7 @@ header {
         text-transform: uppercase;
         @include tipo-1(14);
         &.btn {
+
             border-radius: 40px;
             padding: 10px 15px;
             width: 190px;
