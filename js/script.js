@@ -1,13 +1,3 @@
-function toggleMenuMobile() {
-    const btnMenu = document.querySelector('[data-menu="btn"]');
-    const menu = document.querySelector('[data-menu="menu"]');
+import ToggleMenuMobile from './modules/menuMobile.js';
 
-    function toggleMenu() { 
-        menu.classList.toggle('active');
-        btnMenu.classList.toggle('active');
-    }
-
-    btnMenu.addEventListener('click', toggleMenu);
-}   
-
-toggleMenuMobile();
+ToggleMenuMobile();
