@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/user-logado-header.css">
+    <link rel="stylesheet" href="css/user-logado-elements.css">
+    <link rel="stylesheet" href="css/pages/perfil.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme-dart.css">
+
+    <title>WeTravelss | Perfil</title>
+</head>
+
+<body>
+    <input type="checkbox" id="activeThemeDark" class="themeDark">
+    <div class="wrapper dark">
+        <header class="header-logado">
+            <div class="container-logado">
+                <div class="row">
+                    <nav class="header-nav header-nav-logado">
+                        <ul class="header-nav-left">
+                            <li><a href="home.html" class="has-tooltip has-tooltip--edit"><img src="./img/icons/menu-home.png" alt=""></a></li> <!-- COR CINZA ESCURO(AJUSTAR)-->
+                            <li><a href="#" class="has-tooltip has-tooltip--edit"><img src="./img/icons/menu-message2.png" alt=""></a></li>
+                            <li><a href="local.html" class="has-tooltip has-tooltip--edit"><img src="./img/icons/menu-travel.png" alt=""></a></li>
+                            <li><a href="#" class="has-tooltip has-tooltip--edit"><img src="./img/icons/menu-friends.png" alt=""></a></li>
+                        </ul>
+
+                        <div class="header-nav-center">
+                            <a href="#" class="header-logo header-logo-logado"><span>We</span></a>
+                            <input type="text" placeholder="Viagens, Lugares, Amigos...">
+                            <button type="submit"></button>
+                        </div>
+
+                        <ul class="header-nav-right">
+                            <li class="theme-dart-label"><label for="activeThemeDark"></label></li>
+                            <li class="photo-perfil has-submenu">
+                                <a href="#"><img src="./img/user-01.jpeg" alt="Foto do usuário"><span>James</span></a>
+                                <ul class="sub-menu sub-menu-perfil">
+                                    <li><a href="#">Perfil</a></li>
+                                    <li><a href="#">Fotos</a></li>
+                                    <li><a href="#">Viagens</a></li>
+                                    <li><a href="#">Configurações</a></li>
+                                    <li><a href="index.html">Sair</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- NAV-MOBILE -->
+                    <span class="theme-dart-label"><label for="activeThemeDark"></label></span>
+                    <input type="checkbox" id="checkbox-menu">
+                    <label class="checkbox-menu-label" for="checkbox-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <nav class="header-nav header-nav-logado-mobile">
+                        <a href="home.html" class="header-logo header-logo-logado"><span>We</span> Travelss</a>
+                        <ul>
+                            <li><a href="home.html">Início</a></li>
+                            <li><a href="perfil.html">Perfil</a></li>
+                            <li><a href="local.html">Trends viagens</a></li>
+                            <li><a href="#">Mensagens</a></li>
+                            <li><a href="#" class="header-nav-more">Mais opções</a></li>
+                            <!-- <li><a href="#">Notificações</a></li> -->
+                            <!-- <li><a href="#">Amigos</a></li> -->
+                            <!-- <li><a href="#">Albuns</a></li> -->
+                            <!-- <li><a href="#">Viagens</a></li> -->
+                            <!-- <li><a href="#">Configurações</a></li> -->
+                            <li><a href="index.html">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="content bg-profile">
+            <div class="container-logado">
+                <div class="row grid-logado grid-logado-cl-2 grid-logado-cl-sm-1">
+                    <div class="content-left">
+                        <ul>
+                            <li><a href="home.html" class="has-tooltip has-tooltip-toleft has-tooltip--edit"><img src="./img/icons/menu-home.png" alt="Icone de mensagens"></a></li>
+                            <li><a href="#" class="has-tooltip has-tooltip-toleft has-tooltip--edit"><img src="./img/icons/menu-message2.png" alt="Icone de mensagens"></a></li>
+                            <li><a href="#" class="has-tooltip has-tooltip-toleft has-tooltip--edit"><img src="./img/icons/menu-notification.png" alt="Icone de notificações"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="content-center">
+                        <div class="row">
+                            <div class="profile">
+                                <div class="profile-summary">
+                                    <div>
+                                        <div class="profile-summary-img">
+                                            <img src="./img/user-01.jpeg" alt="Foto de perfil do usuário">
+                                            <a href="#" class="btn-edit-thumb"></a>
+                                        </div>
+                                        <div>
+                                            <h2 class="profile-summary-name">James Rodrigues</h2>
+                                            <h3 class="profile-summary-description">Fotógrafo Internacional</h3>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="btn-edit-bg">Editar</a>
+                                </div>
+
+                                <div class="profile-nav">
+                                    <ul>
+                                        <li><a href="#" class="active">Timeline</a></li>
+                                        <li><a href="perfil-albuns.html">Albuns</a></li>
+                                        <li><a href="#">Amigos</a></li>
+                                        <li><a href="#">Viagens</a></li>
+                                        <li class="has-submenu">
+                                            <a href="#">Mais</a>
+                                            <!-- <ul></ul> -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- <a href="#">Editar perfil</a> -->
+                                </div>
+
+                                <div class="profile-info">
+                                    <div class="row grid-logado grid-logado--edit grid-logado-profile-info">
+                                        <div>
+                                            <h3 class="small-title">Resumo</h3>
+                                            <div class="profile-info-summary">
+                                                <ul>
+                                                    <li>
+                                                        <div>
+                                                            <img src="./img/icons/info-gray.png" alt="">
+                                                        </div>
+                                                        <span>
+                                                            Estudando na FATEC de Carapicuiba em <bold>Sistemas para Internet</bold>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <img src="./img/icons/location-gray.png" alt="">
+                                                        </div>
+                                                        <span>
+                                                            De <bold>São Paulo</bold>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <img src="./img/icons/menu-travel.png" alt="">
+                                                        </div>
+                                                        <span>
+                                                            Está viajando em <bold>Paris</bold> <img src="./img/icons/france.png" alt="Icone do pais da Fraça">
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <img src="./img/icons/time-gray.png" alt="">
+                                                        </div>
+                                                        <span>
+                                                            Entrou em Outubro de <bold>2020</bold>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <img src="./img/icons/wifi-gray.png" alt="">
+                                                        </div>
+                                                        <span>
+                                                            Seguido por <bold>226 pessoas</bold>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h3 class="small-title">Últimos países visitados</h3>
+                                            <div class="profile-info-countries">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./img/france.png" alt="Icone do pais visitado">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/espanha.png" alt="Icone do pais visitado">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/canada.png" alt="Icone do pais visitado">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/alemanha.png" alt="Icone do pais visitado">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/united-states-of-america.png" alt="Icone do pais visitado">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="small-title">Publicações</h3>
+                                            <div class="post-item-box">
+                                                <div class="post-item-header">
+                                                    <div>
+                                                        <a href="#">
+                                                            <img src="./img/user-01.jpeg" alt="Imagem do usuário">
+                                                        </a>
+                                                        <div>
+                                                            <h3><a href="#">James Rodrigues</a></h3>
+                                                            <span>Hoje • 12:18 • <img src="./img/icons/worldwide.png" alt="icone de privacidade do post"></span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="more-options"></a>
+                                                </div>
+                                                <div class="post-item-content">
+                                                    <p>Liberdade é um estado de espirito no qual você só foca no seu próprio interior e esquece de tudo a sua volta, ter o próprio isolamento de tudo que te preocupas, ser digno de liberdade é a divindade que poucos têm e muitos querem ter.</p>
+                                                    <div class="post-item-content-img">
+                                                        <img src="./img/storie-post-09.jpg" alt="">
+                                                        <div class="post-item-content-location">
+                                                            <img src="./img/icons/location.png" alt="icone de localização">
+                                                            <div>
+                                                                <p>Kelingking Tour</p>
+                                                                <span>Indonesia</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item-info">
+                                                    <p><span>115</span>Curtidas</p>
+                                                    <p><span>37</span>Comentários</p>
+                                                </div>
+                                                <div class="post-item-actions">
+                                                    <button class="btn-action btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/like.png" alt="Icone de curtir">
+                                                    </button>
+                                                    <button class="btn-action btn-comment btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/comment.png" alt="Icone de comentar">
+                                                    </button>
+                                                    <button class="btn-action btn-share btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/share.png" alt="Icone de compartilhar">
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="post-item-box">
+                                                <div class="post-item-header">
+                                                    <div>
+                                                        <a href="#">
+                                                            <img src="./img/user-01.jpeg" alt="Imagem do usuário">
+                                                        </a>
+                                                        <div>
+                                                            <h3>
+                                                                <a href="#">James Rodrigues</a>
+                                                            </h3>
+                                                            <span>12 min atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="more-options"></a>
+                                                </div>
+                                                <div class="post-item-content">
+                                                    <p>Talvez eu deva ser forte, pedir ao mar por mais sorte e aprender a navegar.</p>
+                                                    <div class="post-item-content-img">
+                                                        <img src="./img/user-post-01.1.jpeg" alt="Foto do post do usuário">
+                                                        <div class="post-item-content-location">
+                                                            <img src="./img/icons/location.png" alt="icone de localização">
+                                                            <div>
+                                                                <p>Praia de Thun</p>
+                                                                <span>Suíça</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item-info">
+                                                    <p><span>200</span>Curtidas</p>
+                                                    <p><span>40</span>Comentários</p>
+                                                </div>
+                                                <div class="post-item-actions">
+                                                    <button class="btn-action btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/like.png" alt="Icone de curtir">
+                                                    </button>
+                                                    <button class="btn-action btn-comment btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/comment.png" alt="Icone de comentar">
+                                                    </button>
+                                                    <button class="btn-action btn-share btn-curtir has-tooltip has-tooltip-tobottom has-tooltip--edit">
+                                                        <img src="./img/icons/share.png" alt="Icone de compartilhar">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

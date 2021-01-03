@@ -1,0 +1,193 @@
+.stories-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stories-box {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+.stories-box::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+
+.stories-box::-webkit-scrollbar-thumb {
+    background:#b9b9b9;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.stories-box-user {
+    background: #333;
+    border-radius: 40px;
+    height: 260px;
+    min-width: 165px;
+}
+
+.stories-box-user + .stories-box-user {
+    margin-left: 10px;
+}
+
+.stories-box-user a {
+    background: teal;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
+    border-radius: 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 10px;
+    transition: .3s;
+    width: 100%;
+}
+
+.stories-box-user a:hover {
+    transform: scale(1.035);
+}
+
+.stories-box-user:nth-child(1) a {
+    background: url(../../img/user-01.jpeg);
+    background-position: center;
+    position: relative;
+}
+
+.stories-box-user:nth-child(1) span {
+    background: rgb(0 0 0 / 76%) !important;
+    border: solid 2px var(--white);
+    bottom: 45px;
+    position: absolute;
+    z-index: 1;
+}
+
+.stories-box-user:nth-child(1) h3 {
+    background: var(--black);
+    bottom: -1px;
+    border-radius: 0 0 30px 30px;
+    left: 0;
+    padding: 23px 0 18px;
+    position: absolute;
+    width: 100%;
+}
+
+.stories-box-user:nth-child(2) a {
+    background: url(../../img/storie-post-02.jpeg);
+}
+
+.stories-box-user:nth-child(3) a {
+    background: url(../../img/storie-post-07.jpeg);
+}
+
+.stories-box-user:nth-child(4) a {
+    background: url(../../img/storie-post-06.jpeg);
+    background-position: center;
+}
+
+.stories-box-user:nth-child(5) a {
+    background: url(../../img/storie-post-04.jpeg);
+}
+
+.stories-box-user:nth-child(6) a {
+    background: url(../../img/storie-post-01.jpeg);
+}
+
+.stories-box-user:nth-child(7) a {
+    background: url(../../img/storie-post-03.jpeg);
+}
+
+.stories-box-user span {
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
+    border: solid 2px var(--white);
+    border-radius: 50%;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: -32px;
+    width: 50px;
+}
+
+.stories-box-user:nth-child(1) span {
+    align-items: center;
+    background: rgba(0,0,0, .5);
+    color: var(--white);
+    display: flex;
+    font-size: 34px;
+    justify-content: center;
+}
+
+.stories-box-user:nth-child(2) span {
+    background: url(../../img/storie-user-01.jpeg);
+}
+
+.stories-box-user:nth-child(3) span {
+    background: url(../../img/storie-user-05.jpeg);
+}
+
+.stories-box-user:nth-child(4) span {
+    background: url(../../img/storie-user-10.jpeg);
+}
+
+.stories-box-user:nth-child(5) span {
+    background: url(../../img/storie-user-06.jpeg);
+    background-position: center;
+}
+
+.stories-box-user:nth-child(6) span {
+    background: url(../../img/storie-user-02.jpeg);
+}
+
+.stories-box-user:nth-child(7) span {
+    background: url(../../img/storie-user-03.jpeg);
+}
+
+.stories-box-user h3 {
+    color: var(--white);
+    font-family: 'Roboto Regular';
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 3px #353535;
+}
+
+.top-travels {
+    margin-bottom: 52px;
+}
+
+.top-travels-item {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 7px;
+    display: flex;
+    padding: 5px;
+    transition: .07s;
+}
+
+.top-travels-item:hover {
+    transform: scale(1.03);
+}
+
+.top-travels-item + .top-travels-item {
+    margin-top: 10px;
+}
+
+.top-travels-item img {
+    border-radius: 5px;
+    height: 67px;
+    margin-right: 10px;
+    width: 65px;
+}
+
+.top-travels-item h3 {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.top-travels-item span {
+    color: #4a4a4a;
+    font-size: 14px;
+}
+

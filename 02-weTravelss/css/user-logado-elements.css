@@ -1,0 +1,471 @@
+body {
+    background: #e3f2ef;
+}
+
+.grid-logado {
+    display: grid;
+    grid-gap: 70px;
+}
+
+.grid-logado > div {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.grid-logado-cl-2 {
+    grid-template-columns: 64px minmax(500px, 1fr);
+}
+
+.grid-logado-cl-3 {
+    grid-template-columns: 64px minmax(500px, 1fr) minmax(265px, 300px);
+}
+
+.more-options {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    padding-left: 4px;
+    padding-right: 5px;
+    transform: rotate(-90deg);
+    width: 19px;
+}
+
+.more-options::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/icons/more.png) no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.content-left {
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 66px);
+    position: relative;
+    z-index: 2;
+}
+
+.content-left ul {
+    background: var(--white);
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    padding: 22px 16px;
+    position: fixed;
+}
+
+.content-left li + li {
+    margin-top: 28px;
+}
+
+.content-left li a.has-tooltip--edit:hover::after {
+    left: 40px;
+    top: -10px;
+}
+
+.content-left li:nth-child(1) a:hover::after {
+    content: 'Home';
+}
+
+.content-left li:nth-child(2) a:hover::after {
+    content: 'Mensagens';
+}
+
+.content-left li:nth-child(3) a:hover::after {
+    content: 'Notificações';
+}
+
+.content-left li img {
+    width: 26px;
+}
+
+.posts-new-box {
+    background: var(--white);
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    padding: 20px 15px;
+}
+
+.posts-new-box > div {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+.posts-new-box > div ul {
+    display: flex;
+    padding-left: 2px;
+    width: 200px;
+}
+
+.posts-new-box > div li {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.posts-new-box > div li + li {
+    margin-left: 22px;
+}
+
+.posts-new-box > div li a.has-tooltip--edit::after {
+    top: -28px;
+}
+
+.posts-new-box > div li:nth-child(1) img {
+    margin-bottom: 3px;
+    width: 22px;
+}
+
+.posts-new-box > div li:nth-child(1) a:hover::after {
+    content: 'Imagem';
+}
+
+.posts-new-box > div li:nth-child(1) a.has-tooltip--edit::after {
+    left: -18px;
+    top: -30px;
+}
+
+.posts-new-box > div li:nth-child(2) img {
+    width: 28px;
+}
+
+.posts-new-box > div li:nth-child(2) a:hover::after {
+    content: 'Video';
+}
+
+.posts-new-box > div li:nth-child(2) a.has-tooltip--edit::after {
+    left: -10px;
+}
+
+.posts-new-box > div li:nth-child(3) img {
+    margin-bottom: 4px;
+    width: 25px;
+}
+
+.posts-new-box > div li:nth-child(3) a:hover::after {
+    content: 'Localização';
+}
+
+.posts-new-box > div li:nth-child(3) a.has-tooltip--edit::after {
+    left: -28px;
+}
+
+.posts-new-box > div li:nth-child(4) img {
+    margin-bottom: 5px;
+    width: 24px;
+}
+
+.posts-new-box > div li:nth-child(4) a:hover::after {
+    content: 'Amigos';
+}
+
+.posts-new-box > div li:nth-child(4) a.has-tooltip--edit::after {
+    left: -16px;
+}
+
+.posts-new-box > div img {
+    width: 24px;
+}
+
+.posts-new-box textarea {
+    border-radius: 7px;
+    font-size: 16px;
+    height: 55px;
+    padding: 10px 14px 10px 14px;
+    width: calc(80% - 20px);
+}
+
+.posts-new-box .btn-publicar {
+    margin-left: 10px;
+    width: 20%;
+}
+
+.post-item-box {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+    padding: 20px 15px;
+}
+
+.post-item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-item-header > div {
+    display: flex;
+    width: 95%;
+}
+
+.post-item-header > div > a{
+    margin-right: 10px;
+}
+
+.post-item-header img {
+    border-radius: 7px;
+    height: 60px;
+    width: 60px;
+}
+
+.post-item-header h3 {
+    color: var(--black);
+    font-family: 'Roboto Regular';
+    margin-bottom: 2px;
+}
+
+.post-item-header h3 a {
+    color: var(--black);
+}
+
+.post-item-header span {
+    align-items: center;
+    color: #5f5f5f;
+    display: flex;
+    font-size: 14px;
+}
+
+.post-item-header span img {
+    border: solid 0.1px #444;
+    height: 14px;
+    margin-left: 4px;
+    width: 14px;
+}
+
+.post-item-content > p {
+    margin: 12px 0;
+    padding: 0 30px;
+}
+
+.post-item-content img {
+    border-radius: 8px;
+}
+
+.post-item-content-img {
+    position: relative;
+}
+
+.post-item-content-location {
+    align-items: center;
+    background: rgba(0,0,0,0);
+    border-radius: 10px 0 10px;
+    bottom: 1%;
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    height: 70px;
+    right: 0;
+    padding: 5px 0px 5px 10px;
+    position: absolute;
+    transition: .5s;
+    width: 50px;
+}
+
+.post-item-content-location:hover {
+    background: rgba(0,0,0,.6) !important;
+    margin-right: 0px !important;
+    padding: 5px 10px;
+    width: 220px !important;
+}
+.post-item-content-location img {
+    width: 30px !important;
+}
+
+.post-item-content-location p {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.post-item-content-location p, 
+.post-item-content-location span {
+    display: none !important;
+    opacity: 0;
+    transition: opacity 2s;
+    animation: toBottom forwards 1.5s;
+    animation-delay: .3s;
+}
+
+
+
+.post-item-content-location:hover p, 
+.post-item-content-location:hover span {
+    display: block !important;
+} 
+
+.post-item-content-location img {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.post-item-content-location p {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+}
+
+.post-item-content-location span {
+    display: block;
+    font-size: 14px;
+}
+
+.post-item-content-location > div {
+    width: 100%;
+}
+
+.post-item-info {
+    margin: 14px 0;
+}
+
+.post-item-info p {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.post-item-info p + p {
+    margin-left: 20px;
+}
+
+.post-item-info p span {
+    font-family: 'Roboto Bold';
+    margin-right: 5px;
+}
+
+.post-item-actions {
+    display: flex;
+    border-top: solid 1px #f3f3f3;
+    justify-content: center;
+    padding-top: 18px;
+}
+
+.post-item-actions button {
+    align-items: center;
+    background-color: #FFF;
+    border: solid 1px #e8e8e8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+    padding: 12px 35px;
+}
+
+.post-item-actions button + button {
+    margin-left: 4px;
+}
+
+.post-item-actions button:nth-child(1):hover::after {
+    content: 'Curtir';
+}
+
+.post-item-actions button:nth-child(2):hover::after {
+    content: 'Comentar';
+}
+
+.post-item-actions button:nth-child(3):hover::after {
+    content: 'Compartilhar';
+}
+
+.post-item-actions button.has-tooltip--edit:hover::after {
+    top: -32px;
+}
+
+.post-item-content, 
+.post-item-info,
+.post-item-actions {
+    text-align: center;
+}
+
+.btn-action img {
+    width: 26px;
+}
+
+/* a classe 'your-friends' pode ser reutiizada em uma pagina de 'lista de amigos' por exemplo */
+.your-friends-item, 
+.your-friends-item a {
+    align-items: center;
+    display: flex;
+    transition: .07s;
+    width: 88%;
+}
+
+.your-friends-item:hover {
+    transform: scale(1.03);
+}
+
+.your-friends-item a img {
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 65px;
+}
+
+.your-friends-item {
+    align-items: center;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 7px;
+    display: flex;
+    padding: 5px;
+    width: 100%;
+}
+
+.your-friends-item + .your-friends-item {
+    margin-top: 10px;
+}
+
+.your-friends-item h3 {
+    color: #4a4a4a;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+}
+
+.your-friends-item div span::before {
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin-right: 7px;
+    width: 10px;
+}
+
+.your-friends-item div span.status-online::before {
+    background: #0eab44;
+    box-shadow: 0 0 3px #09a940;
+}
+
+.your-friends-item div span.status-offline::before {
+    background: #fe2423;
+    box-shadow: 0 0 3px #ec1c1c;
+}
+
+.your-friends-item div {
+    color: #868686;
+    font-size: 14px;
+}
+
+.your-friends-item > span {
+    cursor: pointer;
+}
+
+.your-friends-item > span img {
+    width: 20px;
+}
+
+.your-friends-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.your-friends-options a {
+    color: var(--blue);
+    font-size: 14px;
+}

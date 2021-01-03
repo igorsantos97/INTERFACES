@@ -1,0 +1,186 @@
+:root {
+    --dark: #181819;
+    --dark-light: #252526;
+    --shadow: none !important;
+}
+
+.themeDark:checked  + .dark .header-logado, 
+.themeDark:checked  + .dark .profile-info-countries,
+.themeDark:checked  + .dark .profile-info-summary,
+.themeDark:checked  + .dark .albuns,
+.themeDark:checked  + .dark .place,
+.themeDark:checked  + .dark .profile-nav ul {
+    box-shadow: none;
+}
+
+.themeDark:checked  + .dark .small-title {
+    color: var(--white);
+}
+
+/* HOME
+===================================== */
+.themeDark:checked  + .dark {
+    background: var(--dark) !important;
+}
+
+.themeDark:checked  + .dark .header-logado {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .header-nav-center input {
+    background: var(--dark);
+    color: var(--white) !important;
+}
+
+.themeDark:checked  + .dark .header-logo span {
+    background: #3589ff;
+}
+
+.themeDark:checked  + .dark .header-nav-right li.photo-perfil img {
+    border: solid 2px var(--dark);
+}
+
+.themeDark:checked  + .dark .stories-box-user:nth-child(1) h3 {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .stories-box::-webkit-scrollbar-thumb {
+    background: var(--dark-light); 
+}
+
+.themeDark:checked  + .dark .posts-new-box {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .posts-new-box textarea {
+    background: var(--dark);
+    color: var(--white) !important;
+}
+
+.themeDark:checked  + .dark .post-item-box {
+    background: var(--dark-light);
+    color: var(--white);
+}
+
+.themeDark:checked  + .dark .post-item-header h3 a {
+    color: var(--white);
+}
+
+.themeDark:checked  + .dark .post-item-actions button {
+    background-color: #252526;
+    border: solid 1px #181819;
+}
+
+.themeDark:checked  + .dark .top-travels-item {
+    background: #252526;
+}
+
+.themeDark:checked  + .dark .your-friends-item {
+    background: #252526;
+}
+
+.themeDark:checked  + .dark .top-travels-item h3,
+.themeDark:checked  + .dark .your-friends-item h3 {
+    color: var(--white);
+}
+
+.themeDark:checked  + .dark .top-travels-item span {
+    color: #868686;
+}
+
+.themeDark:checked  + .dark .post-item-actions {
+    border-color: var(--dark);
+}
+
+.themeDark:checked  + .dark .content-left ul {
+    background: var(--dark-light);
+}
+
+/* PERFIL
+===================================== */
+.themeDark:checked  + .dark .profile-info-summary {
+    background: var(--dark-light);
+    color: #FFF;
+}
+
+.themeDark:checked  + .dark .bg-profile::before {
+    background: var(--dark);
+}
+
+.themeDark:checked  + .dark .profile-nav ul a.active {
+    color: var(--blue);
+}
+
+.themeDark:checked  + .dark .profile-nav ul {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .profile-info-countries {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .profile-nav ul a.active::after {
+    background: var(--blue);
+}
+
+.themeDark:checked  + .dark .profile-nav ul a {
+    color: var(--white);
+}
+
+/* ALBUNS
+===================================== */
+.themeDark:checked  + .dark .albuns {
+    background: var(--dark-light);
+}
+
+/* LOCAL
+===================================== */
+.themeDark:checked  + .dark .place {
+    background: var(--dark-light);
+    color: var(--white);
+}
+
+.themeDark:checked  + .dark .place-comment-box {
+    background: var(--dark);
+}
+
+.themeDark:checked  + .dark .place-comment-item {
+    background: var(--dark-light);
+}
+
+.themeDark:checked  + .dark .place-comment-item-name,
+.themeDark:checked  + .dark .place-comment-item span strong {
+    color: var(--white);
+}
+
+.themeDark:checked  + .dark .place-comment-action textarea {
+    background: var(--dark);
+    color: var(--white) !important;
+}
+
+.themeDark:checked  + .dark .place-comment-box::-webkit-scrollbar-thumb {
+    background:#b9b9b9;
+    border-radius: 5px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+@media only screen and (max-width: 849px) {
+    /* HOME
+    ===================================== */
+    .themeDark:checked  + .dark .header-logo-logado {
+        color: var(--white);
+    }
+
+    .themeDark:checked  + .dark label.checkbox-menu-label span {
+        background: var(--white);
+    }
+}
+
+@media only screen and (max-width: 1020px) { 
+    /* PERFIL
+    ===================================== */
+    .themeDark:checked  + .dark .profile-summary-name {
+        color: var(--white) !important;
+    }
+}

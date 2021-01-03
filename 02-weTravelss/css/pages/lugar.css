@@ -1,0 +1,148 @@
+.content-center {
+    grid-column: 2 / 4;
+}
+
+.place {
+    background: var(--white);
+    border-radius: 7px;
+    box-shadow: 0px 0px 8px #e2e2e2;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: minmax(500px, 1.7fr) minmax(200px, 1fr);
+    margin-bottom: 20px;
+    padding: 20px 15px;
+}
+
+.place h3 {
+    font-size: 22px;
+}
+
+.place img {
+    border-radius: 7px;
+}
+
+.place-details {
+    font-size: 14px;
+}
+
+.place-details > span {
+    align-items: center;
+    color: #444;
+    display: flex;
+    font-size: 14px;
+}
+
+.place-details > span img {
+    width: 25px;
+}
+
+.place-details-stars {
+    align-items: center;
+    color: #444;
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.place-details-stars img {
+    width: 100px;
+}
+
+.place-details-photos div {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    height: 210px;
+    margin-top: 7px;
+}
+
+.place-details-photos img {
+    height: 100%;
+    width: 100%;
+}
+
+.place-comment-box {
+    background: #e3f2ef;
+    border-radius: 7px;
+    max-height: 562px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.place-comment-item {
+    padding: 10px;
+    background: #FFF;
+    border-radius: 7px;
+}
+
+.place-comment-item + .place-comment-item {
+    margin-top: 10px;
+}
+
+.place-comment-item p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.place-comment-item span {
+    color: #444;
+    font-size: 13px;
+}
+
+.place-comment-item span strong {
+    color: var(--black);
+}
+
+.place-comment-item > div {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 55px 1.5fr 1fr;
+}
+
+.place-comment-item > div > div:last-child {
+    text-align: right;
+}
+
+.place-comment-item-img {
+    border-radius: 7px;
+    height: 55px;
+    width: 55px;
+}
+
+.place-comment-item-name {
+    color: var(--black);
+    font-family: 'Roboto Bold';
+}
+
+.place-comment-item-stars {
+    width: 60px;
+}
+
+.place-comment-action {
+    margin-top: 10px;
+}
+
+.place-comment-action textarea {
+    border-radius: 7px;
+    font-size: 14px;
+    height: 80px;
+    padding: 10px 14px 10px 14px;
+    width: 100%; 
+}
+
+.place-comment-action button {
+    margin-top: 10px;
+    width: 100%; 
+}
+
+.place-comment-box::-webkit-scrollbar {
+    height: 0px;
+    width: 8px;
+}
+
+.place-comment-box::-webkit-scrollbar-thumb {
+    background:#b9b9b9;
+    border-radius: 5px;
+    height: 0px;
+}

@@ -1,0 +1,259 @@
+@import '../fonts/fonts.css';
+
+/* SETTING DEFAULT CONFIGURATION 
+===================================== */
+:root {
+    --black: #171717;
+    --blue: #3888ff;
+    --shadow: 0px 0px 8px #e2e2e2;
+    --white: #FFF;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto Light', Helvetica, Arial;
+    text-rendering: optimizeLegibility !important;
+    font-weight: 600;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.2;
+    font-family: 'Roboto Bold';
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 22.4px;
+    margin-bottom: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+label {
+    color: var(--blue);
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+input, textarea {
+    color: var(--black) !important;
+    font-size: 14px;
+}
+
+button, label {
+    font-weight: 100;
+}
+
+button, label, textarea {
+    font-family: 'Roboto Regular';
+}
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1290px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    color: var(--white) !important;
+    background: var(--blue);
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px 5px;
+    text-align: center;
+    transition: .2s;
+    width: 120px;
+}
+
+.btn:hover {
+    background:#206cdc;
+}
+
+.small-title {
+    color: #4a4a4a;
+    font-family: 'Roboto Bold';
+    font-size: 18px;
+    letter-spacing: 0px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+#checkbox-menu,
+.checkbox-menu-label {
+    display: none;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #dadada;
+    color: #667581;
+    font-size: 16px;
+    height: 40px;
+    padding: 15px 5px 15px 5px;
+    margin-bottom: 20px;
+}
+
+.title-form {
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.has-tooltip {
+    position: relative;
+}
+
+.has-tooltip:hover::after {
+    content: '';
+    animation: toTop .3s forwards;
+    display: inline-block;
+    background: rgba(0,0,0, .8);
+    border-radius: 3px;
+    color: var(--white);
+    font-size: 14px;
+    padding: 5px 6px;
+    max-width: 100%;
+    min-height: 26px;
+    min-width: min-content;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.has-tooltip-tobottom:hover::after {
+    animation: toBottom .3s forwards !important;
+}
+
+.has-tooltip-toleft:hover::after {
+    animation: toLeft .3s forwards !important;
+}
+
+.has-tooltip-toright:hover::after {
+    animation: toRight .3s forwards !important;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu:hover .sub-menu {
+    display: flex !important;
+}
+
+.sub-menu {
+    animation: toTop .3s ease-out;
+    display: none !important;
+    flex-direction: column;
+    padding-top: 20px;
+    position: absolute;
+    top: 35px;
+    z-index: 9999;
+}
+
+.sub-menu li {
+    width: 100%;
+}
+
+/* Resetando configurações before e after caso tiver algo*/
+.sub-menu li a::before,
+.sub-menu li a::after {
+    content: '' !important;
+    background: transparent !important;
+}
+
+
+@keyframes toBottom {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes toLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(20px,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes toRight {
+    from {
+        opacity: 0;
+        transform: translate3d(-20px,0,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes toTop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
