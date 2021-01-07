@@ -1,659 +1,724 @@
 .title {
-    color: $cinza-escuro;
-    font-weight: 600;
-    margin-bottom: 15px;
-    margin-top: 25px;
-    text-align: center;
-    @include tipo-1(36);
+  color: $cinza-escuro;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  text-align: center;
+  @include tipo-1(36);
 }
 
 .sub-title {
-    color: $cinza-claro;
-    font-weight: 100;
-    margin-bottom: 60px;
-    text-align: center;
-    @include tipo-1(18);
+  color: $cinza-claro;
+  font-weight: 100;
+  margin-bottom: 60px;
+  text-align: center;
+  @include tipo-1(18);
 }
 
 .btn {
-    background: $cor-primaria;
-    color: $cor-secundaria;
-    display: inline-block;
-    min-width: 130px;
-    padding: 5px 15px;
-    text-align: center;
+  background: $cor-primaria;
+  color: $cor-secundaria;
+  display: inline-block;
+  min-width: 130px;
+  padding: 5px 15px;
+  text-align: center;
 }
 
 .btn-mobile {
-    display: none;
-    background: transparent;
-    border: none;
-    height: 50px;
-    outline: none;
-    width: 50px;
-    z-index: 9;
-    @include device(s) {
-        display: block;
+  display: none;
+  background: transparent;
+  border: none;
+  height: 50px;
+  outline: none;
+  width: 50px;
+  z-index: 9;
+  @include device(s) {
+    display: block;
+  }
+
+  & span {
+    background: $cor-secundaria;
+    border-radius: 200px;
+    display: block;
+    height: 3px;
+    transition: 0.5s;
+    width: 100%;
+    &:nth-child(2) {
+      width: 80%;
     }
-    
-    & span {
-        background: $cor-secundaria;
-        border-radius: 200px;
-        display: block;
-        height: 3px;
-        transition: .5s;
-        width: 100%;
-        &:nth-child(2) {
-            width: 80%;
-        }
-        &:nth-child(2), &:nth-child(3) {
-            margin-top: 10px;
-        }
-        &:nth-child(3) {
-            width: 60%;
-        }
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 10px;
     }
-    &.active {
-        span:nth-child(1) {
-            transform: rotate(45deg);
-        }
-        span:nth-child(2) {
-            display: none;
-        }
-        span:nth-child(3) {
-            margin-top: -3px;
-            transform: rotate(-45deg);
-            width: 100%;
-        }
-    }    
+    &:nth-child(3) {
+      width: 60%;
+    }
+  }
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+    span:nth-child(3) {
+      margin-top: -3px;
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+  }
 }
 
 %padding {
-    @include device(l) {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    @include device(m) {
-        padding-left: 65px !important;
-        padding-right: 65px !important;
-    }
-    @include device(s) {
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-    }
+  @include device(l) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include device(m) {
+    padding-left: 65px !important;
+    padding-right: 65px !important;
+  }
+  @include device(s) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }
 
 body {
-    @extend %padding;
+  @extend %padding;
 }
 
 p {
-    font-family: $fonte-1;
-    margin: 0;
+  font-family: $fonte-1;
+  margin: 0;
 }
 
 header {
-    left: 0;
-    padding: 0 100px;
-    padding-top: 30px;
-    position: absolute;
-    width: 100%;
-    @extend %padding;
-    .grid-12 {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-    }
-    ul {
-        display: none;
-        @include device(s) {
-            @keyframes animationMenu {
-                from {
-                    margin-left: -280px;
-                }
-                to {
-                    margin-left: 0px;
-                }
-            } 
+  left: 0;
+  padding: 0 100px;
+  padding-top: 30px;
+  position: absolute;
+  width: 100%;
+  @extend %padding;
+  .grid-12 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    display: none;
+    @include device(s) {
+      @keyframes animationMenu {
+        from {
+          margin-left: -280px;
+        }
+        to {
+          margin-left: 0px;
+        }
+      }
 
-            animation: animationMenu .5s forwards;
-            background: $cor-primaria;
-            box-shadow: $shadow;
-            display: none;
-            height: 100vh;
-            flex-direction: column;
-            padding-top: 120px;
-            position: fixed;
-            left: 0;
-            top: -16px;
-            width: 280px;
-            z-index: 1;
-            &.active {
-                display: flex !important;
-                &::after {
-                    content: '';
-                    background: rgba(0,0,0,.4);
-                    display: inline-block;
-                    height: 100vh;
-                    left: 280px;
-                    position: absolute;
-                    right: -280px;
-                    top: 0;
-                    width: 200%;
-                }
-            }
+      animation: animationMenu 0.5s forwards;
+      background: $cor-primaria;
+      box-shadow: $shadow;
+      display: none;
+      height: 100vh;
+      flex-direction: column;
+      padding-top: 120px;
+      position: fixed;
+      left: 0;
+      top: -16px;
+      width: 280px;
+      z-index: 1;
+      &.active {
+        display: flex !important;
+        &::after {
+          content: '';
+          background: rgba(0, 0, 0, 0.4);
+          display: inline-block;
+          height: 100vh;
+          left: 280px;
+          position: absolute;
+          right: -280px;
+          top: 0;
+          width: 200%;
         }
-        li {
-            align-items: center;
-            display: flex;
-        }
-        & li + li {
-            margin-left: 40px;
-            @include device(s) {
-                margin-left: 0px;
-                margin-top: 10px;
-            }
-        }
+      }
     }
-    a {
-        color: $preto;
-        font-weight: 600;
-        text-transform: uppercase;
-        @include tipo-1(14);
-        &.btn {
-
-            border-radius: 40px;
-            padding: 10px 15px;
-            width: 190px;
-        }
-        &:not(.logo) {
-            @include device(s) {
-                border-radius: 0;
-                color: $cor-secundaria;
-                padding: 16px 30px;
-                text-align: center;
-                width: 100%;
-                z-index: 9;
-            }
-        }
-        &.logo {
-            margin-left: -2px;
-        }
+    li {
+      align-items: center;
+      display: flex;
     }
+    & li + li {
+      margin-left: 40px;
+      @include device(s) {
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+  a {
+    color: $preto;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include tipo-1(14);
+    &.btn {
+      border-radius: 40px;
+      padding: 10px 15px;
+      width: 190px;
+    }
+    &:not(.logo) {
+      @include device(s) {
+        border-radius: 0;
+        color: $cor-secundaria;
+        padding: 16px 30px;
+        text-align: center;
+        width: 100%;
+        z-index: 9;
+      }
+    }
+    &.logo {
+      margin-left: -2px;
+    }
+  }
 }
 
 .banner {
+  height: 100vh;
+  padding-top: calc(100px + 3%);
+  @include device(s) {
+    height: auto;
+    padding-top: calc(80px + 3%);
+  }
+  .container {
+    min-height: 535px;
+  }
+  &::before,
+  &::after {
+    content: '';
+    background: $cor-primaria;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+  &::before {
+    top: 0;
     height: 100vh;
-    padding-top: calc(100px + 3%);
+    min-height: 230px;
+    width: 30%;
+    @include device(m) {
+      width: 31%;
+    }
     @include device(s) {
-        height: auto;
-        padding-top: calc(80px + 3%);
+      height: 35vh;
+      width: 100%;
     }
-    .container {
-        min-height: 535px;
+  }
+  &::after {
+    bottom: 0;
+    height: 15px;
+    margin-top: 70px;
+    width: 100%;
+    @include device(s) {
+      content: none;
     }
-    &::before, &::after {
-        content: '';
-        background: $cor-primaria;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        z-index: -1;
-    }
-    &::before {
-        top: 0;
-        height: 100vh;
-        min-height: 230px;
-        width: 30%;
-        @include device(m) {
-            width: 31%;
-        }
-        @include device(s) {
-            height: 35vh;
-            width: 100%;
-        }
-    }
-    &::after {
-        bottom: 0;
-        height: 15px;
-        margin-top: 70px;
-        width: 100%;
-        @include device(s) {
-            content: none;
-        }
-    }
+  }
 }
 
 .banner-img {
-    align-items: center;
-    display: flex;
-    img {
-        margin-left: -65px;
-        @include device(m) {
-            margin-left: -10px;
-        }
-        @include device(s) {
-            margin: 0 auto;
-            width: 250px;
-        }
+  align-items: center;
+  display: flex;
+  img {
+    margin-left: -65px;
+    @include device(m) {
+      margin-left: -10px;
     }
+    @include device(s) {
+      margin: 0 auto;
+      width: 250px;
+    }
+  }
 }
 
 .banner-info {
-    text-align: center;
-    padding-right: 0;
-    position: relative;
-    @include device(l) {
-        padding-right: 50px !important;
+  text-align: center;
+  padding-right: 0;
+  position: relative;
+  @include device(l) {
+    padding-right: 50px !important;
+  }
+  @include device(s) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 80px;
+    margin-bottom: 15px;
+    @include device(m) {
+      padding-right: 0;
     }
     @include device(s) {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+      font-size: 60px;
+      margin-bottom: 0;
+      margin-top: 10px;
     }
-    h1 {
-        font-size: 100px;
-        text-transform: uppercase;
-        letter-spacing: -2px;
-        line-height: 80px;
-        margin-bottom: 15px;
-        @include device(m) {
-            padding-right: 0;
-        }
-        @include device(s) {
-            font-size: 60px;
-            margin-bottom: 0;
-            margin-top: 10px;
-        }
-        span {
-            color: $cor-primaria;
-        }
+    span {
+      color: $cor-primaria;
     }
-    p {
-        @include tipo-1(26);
-        @include device(s) {
-            @include tipo-1(18);
-        }
+  }
+  p {
+    @include tipo-1(26);
+    @include device(s) {
+      @include tipo-1(18);
     }
-    & > div {
-        align-items: center;
-        display: flex;
-        font-weight: 600;
-        margin-top: 40px;
+  }
+  & > div {
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    margin-top: 40px;
+    position: absolute;
+    right: 30px;
+    text-transform: uppercase;
+    @include tipo-1(16);
+    @include device(s) {
+      position: relative;
+    }
+    button {
+      background: $cor-secundaria;
+      border: none;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      height: 70px;
+      margin-right: 20px;
+      width: 70px;
+      &::after {
+        content: '';
+        background: url(../img/icon/play-button.jpg) no-repeat;
+        display: inline-block;
+        height: 60px;
+        left: 30px;
         position: absolute;
-        right: 30px;
-        text-transform: uppercase;            
-        @include tipo-1(16);
-        @include device(s) {
-            position: relative;
-        }
-        button {
-            background: $cor-secundaria;
-            border: none;                
-            border-radius: 50%;
-            box-shadow: $shadow;
-            height: 70px;
-            margin-right: 20px;
-            width: 70px;
-            &::after {
-                content: '';
-                background: url(../img/icon/play-button.jpg) no-repeat;
-                display: inline-block;
-                height: 60px;
-                left: 30px;
-                position: absolute;
-                top: 23px;
-                width: 60px;
-            }
-        }
+        top: 23px;
+        width: 60px;
+      }
     }
+  }
 }
 
 .banner-phrase {
-    bottom: -45px;
-    color: #FFF;
-    left: 0;
-    position: absolute;
-    text-transform: uppercase;
-    @include device(s) {
-        position: relative;
-    }
+  bottom: -40px;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  text-transform: uppercase;
+  @include device(s) {
+    position: relative;
+  }
 }
 
 .banner-networks {
-    position: absolute;
-    bottom: -37%;
-    right: -20px;
-    top: auto;
-    @include device(s) {
-        left: 0;
-        position: relative;
-        width: 100%;
-    }
+  position: absolute;
+  bottom: -37%;
+  right: -20px;
+  top: auto;
+  @include device(s) {
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
+  @include device(l) {
+    right: -60px;
+    top: 20%;
+  }
+  ul {
+    display: flex;
     @include device(l) {
-        right: -60px;
-        top: 20%;
+      display: inherit;
     }
-    ul {
-        display: flex;
-        @include device(l) {
-            display: inherit;
-        }
-        @include device(s) {
-            justify-content: center;
-            li {
-                height: fit-content;
-                position: relative;
-            }
-        }
-        li:first-child {
-            margin-right: 65px;
-            transform: rotate(0);
-            @include device(s) {
-                margin-bottom: 0;
-            }
-        }
-        li:nth-child(2)::after {
-            height: 1px;
-            left: 135px;
-            position: absolute;
-            top: 27px;
-            width: 70px;
-            @include device(s) {
-                left: -60px;
-                top: 10px;
-                width: 55px;
-            }
-        }
-        li:not(:first-child) {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            @include device(l) {
-                padding-left: 58px !important;
-            }
-        }
+    @include device(s) {
+      justify-content: center;
+      li {
+        height: fit-content;
+        position: relative;
+      }
     }
-    
     li:first-child {
-        color: $cor-primaria;
-        display: inline-block;
-        font-weight: 600;
-        margin-bottom: 140px;
-        text-transform: uppercase;
-        @include device(l) {
-            transform: rotate(90deg) !important;
-            margin-right: -40px !important;
-        }
+      margin-right: 65px;
+      transform: rotate(0);
+      @include device(s) {
+        margin-bottom: 0;
+      }
     }
     li:nth-child(2)::after {
-        content: '';
-        background: $cor-primaria;
-        display: inline-block;
-        @include device(l) {
-            height: 55px !important;
-            left: 63px !important;
-            top: 100px !important;
-            width: 1px !important;
-        }
+      height: 1px;
+      left: 135px;
+      position: absolute;
+      top: 27px;
+      width: 70px;
+      @include device(s) {
+        left: -60px;
+        top: 10px;
+        width: 55px;
+      }
     }
+    li:not(:first-child) {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      @include device(l) {
+        padding-left: 58px !important;
+      }
+    }
+  }
+
+  li:first-child {
+    color: $cor-primaria;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 140px;
+    text-transform: uppercase;
+    @include device(l) {
+      transform: rotate(90deg) !important;
+      margin-right: -40px !important;
+    }
+  }
+  li:nth-child(2)::after {
+    content: '';
+    background: $cor-primaria;
+    display: inline-block;
+    @include device(l) {
+      height: 55px !important;
+      left: 63px !important;
+      top: 100px !important;
+      width: 1px !important;
+    }
+  }
 }
 
 .info {
-    margin-bottom: 85px;
-    margin-top: 85px;
+  margin-bottom: 85px;
+  margin-top: 85px;
 }
 
 .info-item {
-    align-items: center;
-    box-shadow: $shadow;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 70px 15px;
-    & + .info-item {
-        @include device(s) {
-            margin-top: 15px;
-        }
+  align-items: center;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 70px 15px;
+  & + .info-item {
+    @include device(s) {
+      margin-top: 15px;
     }
-    @include device(l) {
-        padding: 70px;
-    }
-    strong {
-        color: $preto;
-        font-style: italic;
-        margin: 45px 0 25px;
-    }
-    p {
-        color: $cinza-claro;
-        font-weight: 100;
-        @include tipo-1(14);
-    }
-    a.btn {
-        display: inline-block;
-        font-style: italic;
-        margin-top: 75px;
-        @include tipo-2(12);
-    }
+  }
+  @include device(l) {
+    padding: 70px;
+  }
+  strong {
+    color: $preto;
+    font-style: italic;
+    margin: 45px 0 25px;
+  }
+  p {
+    color: $cinza-claro;
+    font-weight: 100;
+    @include tipo-1(14);
+  }
+  a.btn {
+    display: inline-block;
+    font-style: italic;
+    margin-top: 75px;
+    @include tipo-2(12);
+  }
 }
 
 .portfolio {
-    .row > * {
-        margin-bottom: 10px;
-    }
+  .row > * {
+    margin-bottom: 10px;
+  }
 }
 
 .portfolio-item {
-    position: relative;
-    &:hover .portfolio-details {
-        display: flex !important;
-    }
-    img {
-        width: 100%;
-    }
+  position: relative;
+  &:hover .portfolio-details {
+    display: flex !important;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 .portfolio-details {
-    display: none;
-    align-items: center;
-    background: $cor-primaria;
+  display: none;
+  align-items: center;
+  background: $cor-primaria;
+  color: $cor-secundaria;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  h4 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 0;
+    @include tipo-1(36);
+    @include device(m) {
+      @include tipo-1(18);
+    }
+  }
+  p {
+    font-weight: 100;
+    width: 80%;
+    @include tipo-1(14);
+    @include device(m) {
+      margin-bottom: 15px;
+      max-height: 70px;
+      overflow-y: hidden;
+    }
+  }
+  a {
     color: $cor-secundaria;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    left: 0;
+    bottom: 15px;
+    font-weight: 100;
     position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    h4 {
-        font-weight: 500;
-        margin-bottom: 15px;
-        margin-top: 0;
-        @include tipo-1(36);
-        @include device(m) {
-            @include tipo-1(18);
-        }
+    right: 15px;
+    @include tipo-1(14);
+    &::after {
+      content: '';
+      background: url(../img/icon/expand.png) no-repeat;
+      background-size: contain;
+      display: inline-block;
+      height: 24px;
+      margin-left: 10px;
+      width: 24px;
     }
-    p {
-        font-weight: 100;
-        width: 80%;
-        @include tipo-1(14);
-        @include device(m) {
-            margin-bottom: 15px;
-            max-height: 70px;
-            overflow-y: hidden;
-        }
-    }
-    a {
-        color: $cor-secundaria;
-        bottom: 15px;
-        font-weight: 100;
-        position: absolute;
-        right: 15px;
-        @include tipo-1(14);
-        &::after {
-            content: '';
-            background: url(../img/icon/expand.png) no-repeat;
-            background-size: contain;
-            display: inline-block;
-            height: 24px;
-            margin-left: 10px;
-            width: 24px;
-        }
-    }
+  }
 }
 
 .testimonial {
-    margin-bottom: 85px;
-    margin-top: 85px;
+  margin-bottom: 85px;
+  margin-top: 85px;
 }
 
 .testimonial-slider {
-    padding-right: 65px;
-    padding-left: 65px;
-    @include device(s) {
-        padding-right: 10px;
-        padding-left: 10px;
-        margin-right: 14px;
-        margin-left: 14px;
-    }
+  padding-right: 65px;
+  padding-left: 65px;
+  @include device(s) {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 14px;
+    margin-left: 14px;
+  }
 }
 
 .testimonial-slider-item {
-    align-items: center;
-    box-shadow: $shadow;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 45px;
-    position: relative;
-    text-align: center;
-    &::after, &::before {
-        content: '';
-        background: $cor-primaria;
-        display: inline-block;
-        height: 90%;
-        position: absolute;
-        width: 25px;
-    }
-    &::before {
-        left: 0;
-        margin-left: -25px;
-    }
-    &::after {
-        right: 0;
-        margin-right: -25px;
-    }
-    h4 {
-        margin-bottom: 35px;
-        margin-top: 35px;
-    }
-    p {
-        color: $cinza-claro;
-        font-weight: 100;
-        @include tipo-1(14);
-    }
+  align-items: center;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 45px;
+  position: relative;
+  text-align: center;
+  &::after,
+  &::before {
+    content: '';
+    background: $cor-primaria;
+    display: inline-block;
+    height: 90%;
+    position: absolute;
+    width: 25px;
+  }
+  &::before {
+    left: 0;
+    margin-left: -25px;
+  }
+  &::after {
+    right: 0;
+    margin-right: -25px;
+  }
+  h4 {
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  p {
+    color: $cinza-claro;
+    font-weight: 100;
+    @include tipo-1(14);
+  }
 }
 
 .testimonial-slider-control {
-    margin-top: 55px;
-    ul {
-        justify-content: center;
-        display: flex;
-    }
-    li button {
-        background: #E9E4FE;
-    }
-    li.active button {
-        background: $cor-primaria;
-    }
-    li + li {
-        margin-left: 15px;
-    }
-    button {
-        border: none;
-        border-radius: 50%;
-        height: 13px;
-        width: 13px;
-    }
+  margin-top: 55px;
+  ul {
+    justify-content: center;
+    display: flex;
+  }
+  li button {
+    background: #e9e4fe;
+  }
+  li.active button {
+    background: $cor-primaria;
+  }
+  li + li {
+    margin-left: 15px;
+  }
+  button {
+    border: none;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+  }
 }
 
-
 .contact {
-    margin-bottom: 100px;
-    form {
-        display: flex;
-        justify-content: center;
-        > * {
-            height: 50px;
-        }
-        input {
-            border: solid 1px $cor-primaria;
-            border-right: none;
-            padding: 10px 12px;
-            width: 320px;
-            @include tipo-1(14);
-        }
-        button {
-            background: $cor-primaria;
-            border: solid 1px $cor-primaria;
-            border-left: none;
-            color: $cor-secundaria;
-            font-style: italic;
-            width: 160px;
-            @include tipo-2(14);
-        }
+  margin-bottom: 100px;
+  form {
+    display: flex;
+    justify-content: center;
+    > * {
+      height: 50px;
     }
+    input {
+      border: solid 1px $cor-primaria;
+      border-right: none;
+      padding: 10px 12px;
+      width: 320px;
+      @include tipo-1(14);
+    }
+    button {
+      background: $cor-primaria;
+      border: solid 1px $cor-primaria;
+      border-left: none;
+      color: $cor-secundaria;
+      font-style: italic;
+      width: 160px;
+      @include tipo-2(14);
+    }
+  }
+}
+
+.modal-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 5px;
+  padding: 40px;
+  border: solid 10px $cor-primaria;
+  position: relative;
+  min-width: 300px;
+}
+
+.modal .fechar {
+  color: #fff;
+  background: $cor-primaria;
+  border: 4px solid white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  height: 50px;
+  right: -30px;
+  top: -30px;
+  position: absolute;
+  width: 50px;
+}
+
+.modal-video {
+  height: 350px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
-    background: $cor-primaria;
-    box-shadow: -100px 0 0 $cor-primaria, 
-                100px 0 0 $cor-primaria;
-    padding: 55px 0;
-    .grid-12 {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        @include device(s) {
-            flex-direction: column;
-        }
+  background: $cor-primaria;
+  box-shadow: -100px 0 0 $cor-primaria, 100px 0 0 $cor-primaria;
+  padding: 55px 0;
+  .grid-12 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @include device(s) {
+      flex-direction: column;
     }
-    ul {
-        display: flex;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+  ul:nth-child(2) li + li {
+    margin-left: 55px;
+    @include device(m) {
+      margin-left: 35px;
     }
-    li {
-        align-items: center;
-        display: flex;
-        text-align: center;
+    @include device(s) {
+      margin-left: 50px;
     }
-    ul:nth-child(2) li + li {
-        margin-left: 55px;
-        @include device(m) {
-            margin-left: 35px;
-        }
-        @include device(s) {
-            margin-left: 50px;
-        }
-    }
-    ul:nth-child(3) li + li {
-        margin-left: 30px;
-    }
-    a {
-        color: $cor-secundaria;
-        font-weight: 100;
-        @include tipo-1(14);
-    }
+  }
+  ul:nth-child(3) li + li {
+    margin-left: 30px;
+  }
+  a {
+    color: $cor-secundaria;
+    font-weight: 100;
+    @include tipo-1(14);
+  }
 }
 
 .animation-scroll {
-    opacity: 0;
-    transform: translate3d(-30px, 0, 0);
-    transition: .4s;
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.4s;
 }
 
 .animation-scroll.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.active .modal {
+  animation: animaModal 0.3s forwards;
+}
+
+@keyframes animaModal {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0px, 0);
+  }
+  top {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0, 0);
+  }
 }
