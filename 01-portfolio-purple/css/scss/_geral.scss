@@ -19,10 +19,14 @@
   background: $cor-primaria;
   color: $cor-secundaria;
   display: inline-block;
+  outline: none;
   min-width: 130px;
   padding: 5px 15px;
   text-align: center;
-  outline: none;
+  transition: 0.3s;
+  &:hover {
+    background: $cor-primaria-hover;
+  }
 }
 
 .btn-mobile {
@@ -124,9 +128,9 @@ header {
       display: none;
       height: 100vh;
       flex-direction: column;
+      left: 0;
       padding-top: 120px;
       position: fixed;
-      left: 0;
       top: -16px;
       width: 280px;
       z-index: 1;
@@ -242,9 +246,9 @@ header {
 }
 
 .banner-info {
-  text-align: center;
   padding-right: 0;
   position: relative;
+  text-align: center;
   @include device(l) {
     padding-right: 50px !important;
   }
@@ -255,10 +259,10 @@ header {
   }
   h1 {
     font-size: 100px;
-    text-transform: uppercase;
     letter-spacing: -2px;
     line-height: 80px;
     margin-bottom: 15px;
+    text-transform: uppercase;
     @include device(m) {
       padding-right: 0;
     }
@@ -289,43 +293,51 @@ header {
     @include device(s) {
       position: relative;
     }
-    button {
-      background: $cor-secundaria;
-      border: none;
-      border-radius: 50%;
-      box-shadow: $shadow;
-      height: 70px;
-      margin-right: 20px;
-      outline: none;
-      width: 70px;
-      &::after {
-        content: '';
-        background: url(../img/icon/play-button.jpg) no-repeat;
-        display: inline-block;
-        height: 60px;
-        left: 30px;
-        position: absolute;
-        top: 23px;
-        width: 60px;
-      }
+  }
+  button {
+    background: $cor-secundaria;
+    border: none;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    height: 70px;
+    margin-right: 20px;
+    transition: 0.1s;
+    outline: none;
+    width: 70px;
+    &::after {
+      content: '';
+      background: url(../img/icon/play-button.jpg) no-repeat;
+      display: inline-block;
+      height: 60px;
+      left: 30px;
+      position: absolute;
+      top: 23px;
+      transition: 0.3s;
+      width: 60px;
+    }
+    &:hover {
+      border: solid 4px $cor-primaria;
     }
   }
 }
 
 .banner-phrase {
-  bottom: -40px;
+  bottom: -30px;
   color: #fff;
   left: 0;
   position: absolute;
   text-transform: uppercase;
+  @include device(m) {
+    bottom: -14px;
+  }
   @include device(s) {
     position: relative;
   }
 }
 
 .banner-networks {
+  bottom: -30.5%;
   position: absolute;
-  bottom: -37%;
   right: -20px;
   top: auto;
   @include device(s) {
@@ -457,12 +469,12 @@ header {
 }
 
 .portfolio-details {
-  display: none;
   align-items: center;
   background: $cor-primaria;
   color: $cor-secundaria;
-  flex-direction: column;
+  display: none;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   left: 0;
   position: absolute;
@@ -489,8 +501,8 @@ header {
     }
   }
   a {
-    color: $cor-secundaria;
     bottom: 15px;
+    color: $cor-secundaria;
     font-weight: 100;
     position: absolute;
     right: 15px;
@@ -521,65 +533,74 @@ header {
     margin-right: 14px;
     margin-left: 14px;
   }
-}
 
-.testimonial-slider-item {
-  align-items: center;
-  box-shadow: $shadow;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 45px;
-  position: relative;
-  text-align: center;
-  &::after,
-  &::before {
-    content: '';
-    background: $cor-primaria;
-    display: inline-block;
-    height: 90%;
-    position: absolute;
-    width: 25px;
-  }
-  &::before {
-    left: 0;
-    margin-left: -25px;
-  }
-  &::after {
-    right: 0;
-    margin-right: -25px;
-  }
-  h4 {
-    margin-bottom: 35px;
-    margin-top: 35px;
-  }
-  p {
-    color: $cinza-claro;
-    font-weight: 100;
-    @include tipo-1(14);
-  }
-}
-
-.testimonial-slider-control {
-  margin-top: 55px;
-  ul {
+  &-item {
+    align-items: center;
+    animation: toRight 0.6s forwards;
+    box-shadow: $shadow;
+    display: none;
     justify-content: center;
-    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    position: relative;
+    text-align: center;
+    &.active {
+      display: flex;
+    }
+    &::after,
+    &::before {
+      content: '';
+      background: $cor-primaria;
+      display: inline-block;
+      height: 90%;
+      position: absolute;
+      width: 25px;
+    }
+    &::before {
+      left: 0;
+      margin-left: -25px;
+    }
+    &::after {
+      right: 0;
+      margin-right: -25px;
+    }
+    h4 {
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+    p {
+      color: $cinza-claro;
+      font-weight: 100;
+      @include tipo-1(14);
+    }
   }
-  li button {
-    background: #e9e4fe;
-  }
-  li.active button {
-    background: $cor-primaria;
-  }
-  li + li {
-    margin-left: 15px;
-  }
-  button {
-    border: none;
-    border-radius: 50%;
-    height: 13px;
-    width: 13px;
+
+  &-controll {
+    margin-top: 55px;
+    ul {
+      justify-content: center;
+      display: flex;
+    }
+    li button {
+      background: #e9e4fe;
+      outline: none;
+      &:hover {
+        background: $cor-primaria;
+      }
+    }
+    li.active button {
+      background: $cor-primaria-hover;
+      transition: 0.3s;
+    }
+    li + li {
+      margin-left: 15px;
+    }
+    button {
+      border: none;
+      border-radius: 50%;
+      height: 13px;
+      width: 13px;
+    }
   }
 }
 
@@ -604,31 +625,36 @@ header {
       border-left: none;
       color: $cor-secundaria;
       font-style: italic;
+      transition: 0.3s;
       width: 160px;
       @include tipo-2(14);
+
+      &:hover {
+        background: $cor-primaria-hover;
+      }
     }
   }
 }
 
 .modal {
   background: #e8e8e8;
+  border: solid 10px $cor-primaria;
   border-radius: 5px;
   padding: 40px;
-  border: solid 10px $cor-primaria;
   position: relative;
   min-width: 300px;
 
   &-container {
-    position: fixed;
+    align-items: center;
     background: rgba(0, 0, 0, 0.5);
     color: $cor-primaria;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
     display: none;
-    align-items: center;
+    height: 100vh;
     justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 200;
     @include tipo-1(18);
 
@@ -638,11 +664,11 @@ header {
   }
 
   &-video {
-    height: 300px;
-    width: 450px;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 300px;
     justify-content: center;
+    width: 450px;
   }
 
   .fechar {
@@ -714,10 +740,10 @@ footer {
 }
 
 .active .modal {
-  animation: animaModal 0.3s forwards;
+  animation: toRight 0.3s forwards;
 }
 
-@keyframes animaModal {
+@keyframes toRight {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0px, 0);

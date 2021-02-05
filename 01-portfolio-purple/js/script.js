@@ -1,7 +1,9 @@
-import ToggleMenuMobile from './modules/menuMobile.js';
+import toggleMenuMobile from './modules/menuMobile.js';
 import animationScroll from './modules/scrollAnimation.js';
 import modal from './modules/modal.js';
+import sliderControll from './modules/sliderControll.js';
 
-ToggleMenuMobile();
+toggleMenuMobile();
 animationScroll();
 modal();
+sliderControll();
