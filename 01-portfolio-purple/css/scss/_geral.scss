@@ -22,6 +22,7 @@
   min-width: 130px;
   padding: 5px 15px;
   text-align: center;
+  outline: none;
 }
 
 .btn-mobile {
@@ -295,6 +296,7 @@ header {
       box-shadow: $shadow;
       height: 70px;
       margin-right: 20px;
+      outline: none;
       width: 70px;
       &::after {
         content: '';
